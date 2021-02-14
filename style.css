@@ -46,6 +46,7 @@ p{
     font-size: 16px;
     margin: 0;
     padding: 1em 0;
+    text-align: justify;
 
 }
 
@@ -147,6 +148,7 @@ p{
     line-height: 2;
     font-size: 16px;
     margin: 1em 5px;
+    text-align: justify;
     /* padding: 0 5px; */
 }
 
@@ -317,6 +319,10 @@ p{
     align-items: center;
 }
 
+#section-c .content-text p{
+    text-align: justify;
+}
+
 #section-c .content-wrap  .recent-posts{
     display: flex;
     justify-content: space-between;
@@ -331,6 +337,13 @@ p{
 
 #section-c .content-wrap .recent-posts a{
     color: #2690d4;
+    font-size: 17px;
+    transition: all 500ms ease-out;
+    text-align: start;
+}
+
+#section-c .content-wrap  .recent-posts a:hover{
+    font-size: 18px;
 }
 
 #section-c .content-wrap .recent-posts .post-prop{
@@ -346,7 +359,7 @@ p{
 }
 
 section#comment .comment-div{
-    width: 60%;
+    width: 90%;
     padding: 0;
     margin: 1em auto;
 
@@ -359,28 +372,36 @@ section#comment .comment-div{
 }
 
 #comment .comment-div p{
-
-    display: flex;
-    justify-content: flex-start;
-    padding: 0;
+    background-color: #ff0000;
     margin-bottom: 1em;
     margin-top: 0;
+    line-height: 1.5;
+    padding: 0;
+    width: 85%;
+    text-align: justify;
+}
+#comment .comment-div .buttons{
+    text-align: start;
 }
 
 #comment .comment-div .buttons .btn-edit{
-    background: #2690d4;
+    background: #fff;
     border-radius: 15px;
     border: none;
     padding: 1em 2em;
-    margin-left: 1em;
+    margin-right: 1em;
     outline: none;
     cursor: pointer;
 }
 
 #comment .comment-div .buttons .btn-edit i{
    font-size: 1.2em;
-   color: #fff;
-   
+   color: #2690d4; 
+   transition: all 500ms ease-in-out;
+}
+
+#comment .comment-div .buttons .btn-edit i:hover{
+    font-size: 1.5em;
 }
 
 #comment .comment-div .buttons .btn-edit:active{
@@ -430,6 +451,8 @@ section#comment .comment-div{
     height: 2em;
     border-radius: 50%;
     text-align: center;
+    outline: none;
+    cursor: pointer;
     
 }
 
@@ -733,6 +756,8 @@ section#comment .comment-div{
         flex-direction: column;
     }
 
+   
+
     .scroll{
         position: absolute;
         bottom: 1.5%;
@@ -920,6 +945,40 @@ section#comment .comment-div{
         position: absolute;
         bottom: 3%;
         right: 3%;
+    }
+
+    #comment .comment-div p{
+        width: 100%;
+        line-height: 1.2;
+        font-size: 12px;
+    }
+
+    
+    #comment .comment-div .buttons .btn-edit{
+        padding: .5em 1.5em;
+    }
+
+    
+    #comment .comment-div .buttons .btn-edit i{
+        font-size: 1em;
+    }
+
+    #section-c .content-wrap  .recent-posts{
+        padding: 0;
+        width: 100%;
+    }
+
+    #section-c .content-wrap  .recent-posts a{
+        font-size: 16px;
+    }
+
+    #section-c .content-wrap  .recent-posts .post-prop span{
+        font-size: 13px;
+    }
+
+    .copyright div{
+        font-size: 17px;
+        margin-bottom: 0;
     }
 }
 
