@@ -2,12 +2,12 @@
 // Hamburger Toggling
 
 // opening Button
-const openHamburger = document.querySelector('#open-toggle');
+const openHamburger = document.getElementById('open');
 
 let ulLinks = document.getElementById('links');
 
 openHamburger.addEventListener("click", () => {
-    // console.log(ulLinks.classList)
+    // console.log(ulLinks);
     ulLinks.classList.toggle('toggle-open');
 })
 
