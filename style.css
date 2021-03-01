@@ -172,6 +172,7 @@ p{
 
 .links-tag{
     display: flex;
+    justify-content: flex-start;
     border: 1px solid #fff;
     margin-top: 9em;
     margin-left: 2em;
@@ -179,10 +180,15 @@ p{
     border-radius: 5px;
     padding: 0;
 }
+
+.links-tag div{
+    margin-top: 1.25em;
+    margin-left: 1em;
+    color: white;
+}
 .links-tag h4 a{
     color: #2690d4;
     margin-left: 2em;
-    font-weight: bolder;
     text-decoration: none;
 
 }
@@ -212,11 +218,15 @@ p{
     background-color: transparent;
     border: 1px solid #2690d4;
     border-radius: 3px;
-    color: white;
+    color: #269;
+    font-size: 1.1em;
+    font-weight: 300;
     padding: 1em;
     font-weight: 600;
     margin-bottom: 1rem;
+    outline: re;
 }
+
 
 
 .btn_send{
