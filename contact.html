@@ -66,6 +66,12 @@
         <!-- Section A -->
         <section id="section-a" class="grid">
             <div class="content-wrap">
+                <br>
+                <!-- Alert When filling form -->
+                <div class="alert-div" id="alert">
+                    <p>Please all fields are required!</p>
+                    <button class="close-alert" id="alert-btn"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+                </div>
                 <center id="center">
                     <h3>Thanks <strong> Arafat Olayiwola !!</strong></h3>
                     <div class="container">
@@ -103,13 +109,14 @@
                             </div>
                         </div>
                         <hr>
+                    
                         <h2>Message The Developer</h2>
                         
-                        <form  class="contact-form" id="form"id="form" >
-                            <input type="text"  name="fullname" placeholder="Your full names...">
-                            <input type="text" name="subject" placeholder="Subject or title...">
-                            <input type="email" name="email" placeholder="Type your email...">
-                            <textarea name="message" id="" cols="30" rows="10" class="text_area" placeholder="Type in your message..."></textarea>
+                        <form  class="contact-form" id="form" >
+                            <input type="text"  name="fullname" placeholder="Your full names..." id="sender">
+                            <input type="text" name="subject" placeholder="Subject or title..." id="title">
+                            <input type="email" name="email" placeholder="Type your email..." id="mail">
+                            <textarea name="message"  cols="30" rows="10" class="text_area" placeholder="Type in your message..." id="mssg"></textarea>
                             <button type="submit" class="btn_send">Send Message</button>
                         </form>
                     </div>

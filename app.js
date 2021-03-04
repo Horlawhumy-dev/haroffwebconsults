@@ -44,8 +44,41 @@ scrollBtn.addEventListener('click', (e) => {
 // Message Form
 const messageForm = document.getElementById("form");
 
+let messengerName = document.getElementById('sender');
+let title = document.getElementById('title');
+let fromMail = document.getElementById('mail');
+let messageBody = document.getElementById('mssg');
+
 messageForm.addEventListener("submit", (e) => {
-    document.getElementById('message-container').style.display = 'none';
-    document.getElementById('center').style.display = 'block';
+    
+    if( messengerName.value === "" || title.value === "" || mail.value === "" || messageBody.value === ""){
+      
+        document.getElementById('alert').style.visibility = 'visible';
+        document.getElementById('message-container').style.display = 'block';
+        
+        // Clearing Inputs
+        clearInputs();
+       
+    }else{
+        document.getElementById('message-container').style.display = 'none';
+        document.getElementById('center').style.display = 'block';
+    }
     e.preventDefault();
+})
+
+
+// clear inputs
+function clearInputs(){
+    messengerName = '';
+    title.value = '';
+    mail.value = '';
+    messageBody.value = '';
+}
+
+// Closing ALert Button
+const alertBtn = document.getElementById('alert-btn');
+
+alertBtn.addEventListener('click', (e) => {
+    document.getElementById('alert').style.display = 'none';
+    window.location.reload();
 })
