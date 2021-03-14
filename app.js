@@ -42,7 +42,7 @@ scrollBtn.addEventListener('click', (e) => {
 })
 
 // Message Form
-const messageForm = document.getElementById("form");
+let messageForm = document.getElementById("form1");
 
 let messengerName = document.getElementById('sender');
 let title = document.getElementById('title');
@@ -51,7 +51,7 @@ let messageBody = document.getElementById('mssg');
 
 messageForm.addEventListener("submit", (e) => {
     
-    if( messengerName.value === "" || title.value === "" || mail.value === "" || messageBody.value === ""){
+    if( messengerName.value === "" || title.value === "" || fromMail.value === "" || messageBody.value === ""){
       
         document.getElementById('alert').style.visibility = 'visible';
         document.getElementById('message-container').style.display = 'block';
@@ -65,6 +65,32 @@ messageForm.addEventListener("submit", (e) => {
     }
     e.preventDefault();
 })
+
+
+// Comment Form
+let commentForm = document.getElementById("cm_form");
+
+let commentatorName = document.getElementById('commentator');
+let commentsBody = document.getElementById('comments');
+
+commentForm.addEventListener("submit", (e) => {
+    console.log('Hi')
+    
+    // if( commentatorName.value === "" ||  commentsBody.value === ""){
+      
+    //     document.getElementById('alert').style.visibility = 'visible';
+    //     // document.getElementById('message-container').style.display = 'block';
+        
+    //     // Clearing Inputs
+    //     clearInputs();
+       
+    // }else{
+    //     // document.getElementById('message-container').style.display = 'none';
+    //     document.getElementById('center').style.display = 'block';
+    // }
+    e.preventDefault();
+})
+
 
 
 // clear inputs
@@ -82,3 +108,5 @@ alertBtn.addEventListener('click', (e) => {
     document.getElementById('alert').style.display = 'none';
     window.location.reload();
 })
+
+

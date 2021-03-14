@@ -203,10 +203,15 @@
         <!-- Section A -->
         <section id="section-a" class="grid">
             <div class="content-wrap">
+                <!-- Alert When filling form -->
+                <div class="alert-div" id="alert">
+                    <p>Please all fields are required!</p>
+                    <button class="close-alert" id="alert-btn"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+                </div>
                 <h2 class="content-title">Comment Section</h2>
-                <form  class="contact-form" id="form">
-                    <input type="text"  name="fullname" placeholder="Give your name here...">
-                    <textarea name="message" id="" cols="30" rows="10" class="text_area" placeholder="Type in your comment..."></textarea>
+                <form  class="contact-form" id="cm_form">
+                    <input type="text"  name="fullname" placeholder="Give your name here..." id="commentator">
+                    <textarea name="message" id="comments" cols="30" rows="10" class="text_area" placeholder="Type in your comment..."></textarea>
                     <button type="submit" class="btn_send">Post Comment</button>
                 </form>
             </div>
