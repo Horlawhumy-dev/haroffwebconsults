@@ -1,3 +1,4 @@
+
 // Hamburger Toggling
 // opening Button
 let openHamburger = document.getElementById('open');
@@ -16,6 +17,40 @@ closeHamburger.addEventListener("click", () => {
     ulLinks.classList.toggle('toggle-close');
 })
 
+
+
+
+// Comment Form
+let commentForm = document.getElementById("form_comments");
+
+let commentatorName = document.getElementById('commentator');
+let comments = document.getElementById('comments');
+
+commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if( commentatorName.value === "" ||  commentsBody.value === ""){
+        document.getElementById('div-al').style.visibility = 'visible';
+        // Clearing Inputs
+        clearInputs();
+       
+    }
+})
+
+// clear inputs
+function clearInputs(){
+    messengerName = '';
+    title.value = '';
+    mail.value = '';
+    messageBody.value = '';
+}
+
+// Closing ALert Button
+let messagebtn = document.getElementById('btn');
+
+messagebtn.addEventListener('click', () => {
+    document.getElementById('div-al').style.display = 'none';
+    window.location.reload();
+})
 
 
 // Scrolling Top Button
@@ -37,12 +72,4 @@ scrollBtn.addEventListener('click', () => {
     }, 15);
 
 })
-
-
-
-
-
-
-
-
 

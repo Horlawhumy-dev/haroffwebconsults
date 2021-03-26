@@ -17,7 +17,6 @@ closeHamburger.addEventListener("click", () => {
 })
 
 
-
 // Scrolling Top Button
 let scrollBtn = document.getElementById('scroll-top');
 
@@ -37,9 +36,6 @@ scrollBtn.addEventListener('click', () => {
     }, 15);
 
 })
-
-
-
 
 
 

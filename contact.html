@@ -68,9 +68,9 @@
             <div class="content-wrap">
                 <br>
                 <!-- Alert When filling form -->
-                <div class="alert-div" id="alert">
+                <div class="alert-div" id="div-al">
                     <p>Please all fields are required!</p>
-                    <button class="close-alert" id="alert-btn"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+                    <button class="close-alert" id="btn"><i class="fa fa-window-close" aria-hidden="true"></i></button>
                 </div>
                 <center id="center">
                     <h3>Thanks <strong> Arafat Olayiwola !!</strong></h3>
@@ -214,8 +214,14 @@
             </div>
 
             <div class="footer-form">
-                <form>
-                    <input type="email" placeholder="Subscribe your mail...">
+                <h3>Subscribe To Our Weekly Newsletter</h3>
+                <!-- Alert When filling form -->
+                <div class="alert-div" id="alert">
+                    <p>Please fill in all fields!</p>
+                    <button class="close-alert" id="alert-btn"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+                </div>
+                <form id="form_mail">
+                    <input type="email"  id="subscriber_mail" placeholder="Subscribe your mail...">
                     <button type="submit" class="btn-sub">Submit</button>
                 </form>
             </div>
@@ -229,6 +235,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="app.js"></script>
+    <script src="contact.js"></script>
+    <script src="footer.js"></script>
 </body>
 </html>
