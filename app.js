@@ -38,6 +38,13 @@ scrollBtn.addEventListener('click', () => {
 
 })
 
+// Getting current year for the footer
+let currYear = new Date().getUTCFullYear()
+
+let yearSpan = document.getElementById('yearly');
+
+yearSpan.textContent = currYear
+
 
 
 

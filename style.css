@@ -50,6 +50,10 @@ p{
 
 }
 
+.flex{
+    margin-top: 0em;
+}
+
 button.close-alert{
     border: none;
     padding: .7em 1.2em;
@@ -190,6 +194,11 @@ center .container a:active{
 #nav .logo{
     margin: 0em 1.5em;
     font-size: 1.4em;
+}
+
+#nav .logo a{
+    text-decoration: none;
+    color: #fff;
 }
 
 
@@ -681,10 +690,16 @@ section#comment .comment-div{
     color: #fff;
     width: 1.8em;
     height: 1.8em;
-    font-size: 1em;
+    font-size: 1.2em;
     border-radius: 50%;
     cursor: pointer;
     text-align: center;
+    margin-right: 1em;
+}
+
+.carousel .chevron a i{
+    color: #2690d4;
+    font-size: 1.6em;
 }
 
 .carousel .chevron i:active{
@@ -984,6 +999,11 @@ section#comment .comment-div{
     .grid2{
         display: grid;
         grid-template-columns: 10em repeat(2, 1fr);
+    }
+
+    .grid3{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .btn-open{
