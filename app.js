@@ -1,4 +1,11 @@
 // Hamburger Toggling
+
+const form = document.getElementsByTagName('form');
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+})
+
+
 // opening Button
 let openHamburger = document.getElementById('open');
 let ulLinks = document.getElementById('links');

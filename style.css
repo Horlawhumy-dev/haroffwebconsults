@@ -208,7 +208,12 @@ center .container a:active{
     text-align: center;
 }
 
-#showcase .bg-image{
+
+.showcase .bg-image{
+    text-align: center;
+}
+
+/* #showcase .bg-image{
     position: absolute;
     top: 5rem;
     background: #333 url('img/bg.jpg ');
@@ -219,7 +224,7 @@ center .container a:active{
     height: 700px;
     z-index: -1;
     opacity: 0.6;
-}
+} */
 
 
 #showcase .content-wrap, 
@@ -228,6 +233,10 @@ center .container a:active{
 }
 
 #showcase .header-content{
+    color: black;
+    position:absolute;
+    top: 100px;
+    left: 5%;
     margin-top: -1em;
     padding: 0 2em;
 }
@@ -454,37 +463,52 @@ center .container a:active{
 }
 
 #section-c .content-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 #section-c .content-text p{
     background-color: #2690d4;
+    color: black;
 }
 
+.type{
+    background-color: lightgray;
+    color: #2690d4;
+    padding: .5em;
+    margin-top: 1em;
+}
+
+
 #section-c .content-wrap  .recent-posts{
+    background-color: #469cd1;
     display: flex;
-    justify-content: space-between;
-    border: 1px solid #333;
-    border-radius: 10px;
-    box-shadow: 0 3px 2px #333;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 1em;
-    margin-left: 1em;
-    padding: 1em;
-    width: 60%;
+    padding: 1em 2em;
+    
 }
 
 #section-c .content-wrap .recent-posts a{
-    color: #2690d4;
+    text-decoration: none;
+    color: #fdfdfd;
     font-size: 17px;
     transition: all 500ms ease-out;
     text-align: start;
+    margin-top: 1em;
+    
 }
 
-#section-c .content-wrap  .recent-posts a:hover{
-    font-size: 18px;
+#section-c .content-wrap .recent-posts a:hover{
+    text-decoration: underline;
+}
+
+#section-c .content-wrap  .recent-posts:hover{
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
+    box-shadow: 0 2px 4px #333;
 }
 
 #section-c .content-wrap .recent-posts .post-prop{
@@ -847,6 +871,24 @@ section#comment .comment-div{
 
 @media screen and (max-width:699px){
 
+    .showcase .bg-image{
+        height: 70hv;
+    }
+    .showcase .bg-image img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #showcase .header-content{
+        color: black;
+        position:absolute;
+        top: px;
+        left: 5%;
+        right: 5%;
+        /* margin-top: -1em; */
+        padding: 0 2em;
+    }
+
     .left-anime p{
         text-align: justify;
     }
@@ -956,13 +998,21 @@ section#comment .comment-div{
     } */
 
     
-    #section-c .content-wrap a{
+    /* #section-c .content-wrap a{
         width: 100%;
-    }
+    } */
 
     #comment-section .comment-content{
         width: 80%;
         margin: 0 auto;
+    }
+
+    #section-c .content-wrap{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        
     }
 
     #section-c .content-wrap .recent-posts{
@@ -1155,9 +1205,9 @@ section#comment .comment-div{
 }
 
 @media only screen and (max-width:375px){
-    header{
-        margin-bottom: -7em;
-    }
+    /* header{
+        margin-bottom: 3-em;
+    } */
 
     .showcase .bg-image{
         background-position: center;
@@ -1204,6 +1254,7 @@ section#comment .comment-div{
     }
 
     #section-c .content-wrap  .recent-posts{
+        background-color: red;
         padding: 0;
         width: 100%;
     }
