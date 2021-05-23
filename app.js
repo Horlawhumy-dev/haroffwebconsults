@@ -1,4 +1,14 @@
 // Hamburger Toggling
+// Getting current year for the footer
+let currYear = new Date().getUTCFullYear()
+
+let yearSpan = document.getElementById('yearly');
+
+yearSpan.textContent = currYear;
+console.log(currYear)
+
+
+
 
 const form = document.getElementsByTagName('form');
 form.addEventListener('submit', (e) =>{
@@ -44,16 +54,6 @@ scrollBtn.addEventListener('click', () => {
     }, 15);
 
 })
-
-// Getting current year for the footer
-let currYear = new Date().getUTCFullYear()
-
-let yearSpan = document.getElementById('yearly');
-
-yearSpan.textContent = currYear
-
-
-
 
 
 
