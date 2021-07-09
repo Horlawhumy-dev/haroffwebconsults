@@ -14,7 +14,7 @@
 /* Core Styles */
 
 body{
-    background-color: #333;
+    background-color: black;
     color: white;
     font-family: "Poppins", sans-serif;
     line-height: 1.5;
@@ -23,6 +23,58 @@ body{
     text-align: center;
     position: relative;
 }
+
+header{
+    background-color: yellow;
+    min-height: 100vh;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.home-showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: crimson;
+}
+
+.home-showcase h1{
+    font-size: 5rem;
+}
+
+.home-showcase form{
+    width: 80%;
+    margin-top: 2rem;
+    background-color: coral;
+    padding: 1rem;
+}
+.home-showcase .search{
+    background-color: black;
+    padding: 1rem;
+}
+.home-showcase .search input{
+    background-color: transparent;
+    width: 78%;
+    padding: 1rem;
+    border: none;
+}
+
+.home-showcase .search button{
+    background-color: transparent;
+    color: white;
+    padding: 1rem ;
+    border: none;
+}
+
+
+
+
+/* header .home-showcase{
+ margin-top: 5rem;
+} */
 
 a{
     margin-bottom: 10px;
@@ -43,12 +95,10 @@ h1{
 
 h2, h3{
     font-size: 1.5em;
-    margin: 0;
-    padding: 1em 0;
     text-align: center;
 }
 .content-title{
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 }
 
 p{
@@ -64,7 +114,7 @@ form textarea{
 }
 
 .flex{
-    margin-top: 0em;
+    margin-right: 3rem;
 }
 
 button.close-alert{
@@ -200,11 +250,14 @@ center .container a:hover{
 /* Header Showcase*/
 
 #nav{
-    margin: 0;
+    background-color: yellowgreen;
+    min-height: 5vh;
+    min-width: 100%;
     padding: 1em;
     text-align: justify;
     display: flex;
     justify-content: space-between;
+    position: fixed;
 }
 
 #nav .logo{
@@ -216,51 +269,6 @@ center .container a:hover{
     text-decoration: none;
     color: #fff;
 }
-
-
-#showcase{
-    min-height: 450px;
-    color: white;
-    text-align: center;
-}
-
-
-.showcase .bg-image{
-    text-align: center;
-}
-
-/* #showcase .bg-image{
-    position: absolute;
-    top: 5rem;
-    background: #333 url('img/bg.jpg ');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 700px;
-    z-index: -1;
-    opacity: 0.6;
-} */
-
-
-#showcase .content-wrap, 
-#section-a .content-wrap{
-    padding: 0 1.5em;
-}
-
-#showcase .header-content{
-    color: black;
-    position:absolute;
-    top: 100px;
-    left: 5%;
-    margin-top: -1em;
-    padding: 0 2em;
-}
-
-#showcase .header-content a{
-    color: #2690d4;
-}
-
 
 .header-content p{
     text-align: center;
@@ -504,51 +512,61 @@ center .container a:hover{
 }
 
 
-#section-c .content-wrap  .recent-posts{
-    background-color: #469cd1;
+#section-c .content-wrap .grid-layout{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 25px;
+}
+
+.grid-layout .blog{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 1em;
-    padding: 1em;
-    
+    align-items: center;
+    margin-top: 1rem;
 }
 
-#section-c .content-wrap .recent-posts a{
-    text-decoration: none;
-    color: #fdfdfd;
-    font-size: 17px;
-    transition: all 500ms ease-out;
-    text-align: start;
-    margin-top: 1em;
-    
+.grid-layout .blog .inner-div h2{
+    color: #0482d1;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: left;
+    /* font-size: 2rem; */
 }
 
-#section-c .content-wrap .recent-posts a:hover{
-    text-decoration: underline;
+.grid-layout .blog .inner-div{
+    text-align: center;
 }
-
-#section-c .content-wrap  .recent-posts:hover{
-    transform: scale(.9);
-    transition: transform .5s ease;
-    box-shadow: 0 2px 4px #333;
-}
-
-#section-c .content-wrap .recent-posts .post-prop{
+.grid-layout .blog .inner-div p{
     color: black;
-    font-size: 15px;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 2rem;
+    /* margin-left: 2rem; */
+    width: 100%;
+    text-align:justify;
 }
 
-
-
-#section-c .content-wrap .recent-posts .post-prop span:last-child{
-    color: blue;
+.grid-layout .blog .inner-div a{
+    text-decoration: none;
+    background-color: #2691d4d8;
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 5px;
 }
 
+.grid-layout .blog .inner-div a:hover{
+    background-color: #2691d4;
+    padding: 1rem 4.5rem;
+    transition: all .3s ease;
+}
+
+.grid-layout .blog .inner-div a i{
+    color: white;
+}
 section#comment .comment-div{
     width: 90%;
     padding: 0;
-    margin: 1em auto;
+    margin: 1rem auto;
 
 }
 
@@ -611,6 +629,10 @@ section#comment .comment-div{
 
 #section-d .box:first-child{
     background: #2690d4;
+}
+
+#section-d .box p{
+    margin-bottom: 1rem;
 }
 
 #section-d .box a{
@@ -1030,25 +1052,6 @@ section#comment .comment-div{
         margin: 0 auto;
     }
 
-    #section-c .content-wrap{
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-        
-    }
-
-    #section-c .content-wrap .recent-posts{
-        width: 90%;
-    }
-
-    #section-c .content-wrap  .recent-posts{
-        display: flex;
-        flex-direction: column;
-    }
-
-   
-
     .scroll{
         position: absolute;
         bottom: 1.5%;
@@ -1171,8 +1174,19 @@ section#comment .comment-div{
 
 }
 
+@media screen and (max-width: 768px){
+    #section-c .content-wrap .grid-layout{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+       
+    }
 
-
+    #section-c .content-wrap .grid-layout .blog{
+        /* height: 400px; */
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
 /* Mobile Screens */
 
 @media screen and (max-width:500px){
@@ -1190,10 +1204,28 @@ section#comment .comment-div{
     .grid3 .icon{
         display: block;
     }
-
-    #section-c .content-wrap a{
-        width: 100%;
+    #section-c .content-wrap .grid-layout{
+        display: grid;
+        grid-template-columns: auto;
+       
     }
+
+    #section-c .content-wrap .grid-layout .blog{
+        /* height: 400px; */
+        width: 100%;
+        /* margin-bottom: 2rem; */
+    }
+
+    .blog .inner-div h2{
+        width: 100%;
+        font-size: 1.3rem;
+    }
+  
+    .blog .inner-div p{
+        width: 100%;
+        font-size: 1rem;
+    }
+  
 
     #comment-section .comment-content{
         width: 80%;
@@ -1256,10 +1288,7 @@ section#comment .comment-div{
         flex-direction: column;
     }
 
-    .content-wrap a{
-        padding: .5em 1em;
-    }
-
+   
     .scroll{
         position: absolute;
         bottom: 3%;
